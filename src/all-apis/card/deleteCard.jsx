@@ -1,7 +1,7 @@
 import { apiKey, apiToken } from "../keyAndToken";
 import axios from "axios";
 
-const deleteCard = async (id) => {
+export const archiveCard = async (id) => {
     try {
         const response = await axios.delete(
             `https://api.trello.com/1/cards/${id}?key=${apiKey}&token=${apiToken}`
@@ -11,5 +11,3 @@ const deleteCard = async (id) => {
         console.error("Error creating board:", error);
     }
 };
-
-export default deleteCard;

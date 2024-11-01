@@ -1,8 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { Box, Typography, Button } from "@mui/material";
 
-function NotFoundPage() {
+function ErrorPage() {
   return (
     <Box
       className="content"
@@ -35,4 +34,4 @@ function NotFoundPage() {
   );
 }
 
-export default NotFoundPage;
+export default ErrorPage;

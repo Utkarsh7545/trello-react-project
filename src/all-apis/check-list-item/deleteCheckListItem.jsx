@@ -1,7 +1,7 @@
 import { apiKey, apiToken } from "../keyAndToken";
 import axios from "axios";
 
-const deleteCheckListItem = async (id, idCheckItem) => {
+export const deleteCheckListItem = async (id, idCheckItem) => {
     try {
         const response = await axios.delete(
             `https://api.trello.com/1/checklists/${id}/checkItems/${idCheckItem}?key=${apiKey}&token=${apiToken}`
@@ -11,5 +11,3 @@ const deleteCheckListItem = async (id, idCheckItem) => {
         console.error("Error creating board:", error);
     }
 };
-
-export default deleteCheckListItem;

@@ -1,7 +1,7 @@
 import { apiKey, apiToken } from "../keyAndToken";
 import axios from "axios";
 
-const getCheckLists = async (cardId) => {
+export const getCheckLists = async (cardId) => {
     try {
         const response = await axios.get(
             `https://api.trello.com/1/cards/${cardId}/checklists?key=${apiKey}&token=${apiToken}`
@@ -11,5 +11,3 @@ const getCheckLists = async (cardId) => {
         console.error("Error creating board:", error);
     }
 };
-
-export default getCheckLists;
