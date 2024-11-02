@@ -8,9 +8,15 @@ import {
 } from "@mui/material";
 import { Close as CloseIcon } from "@mui/icons-material";
 import { useTheme } from "@emotion/react";
+import { useState } from "react";
 
 function ModalForm({ item, modal, handleModal, handleSubmit }) {
   const theme = useTheme();
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
 
   return (
     <Modal
@@ -63,7 +69,9 @@ function ModalForm({ item, modal, handleModal, handleSubmit }) {
           <InputBase
             autoFocus
             id="name"
-            placeholder={item+` name`}
+            placeholder={`${item} name`}
+            value={inputValue}
+            onChange={handleInputChange}
             sx={{
               bgcolor: "none",
               color: theme.palette.text.primary,
@@ -75,10 +83,11 @@ function ModalForm({ item, modal, handleModal, handleSubmit }) {
               mb: 1,
             }}
           />
-          <Box sx={{ display: "flex" , marginTop: '10px'}}>
+          <Box sx={{ display: "flex", marginTop: '10px' }}>
             <Button
               variant="contained"
               type="submit"
+              disabled={!inputValue.trim()}
               sx={{
                 backgroundColor: theme.palette.secondary.main,
                 color: "white",

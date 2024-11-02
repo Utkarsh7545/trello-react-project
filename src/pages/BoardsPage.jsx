@@ -69,7 +69,7 @@ function BoardsPage() {
       >
         <Container
           maxWidth={false}
-          style={{ paddingTop: "40px", paddingBottom: "40px", width: "80vw" }}
+          style={{ paddingTop: "40px", paddingBottom: "40px", width: "85vw" }}
         >
           <Typography
             variant="h6"
