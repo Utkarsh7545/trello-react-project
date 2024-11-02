@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Container, Typography, Button, Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import toast from "react-hot-toast";
+
 import ModalForm from "../components/common/ModalForm";
 import Board from "../components/Board";
 import Loader from "../components/common/Loader";
-import toast from "react-hot-toast";
 import { getAllBoards } from "../all-apis/board/getAllBoards";
 import { createBoard } from "../all-apis/board/createBoard";
 import Notification from "../components/common/Notification";

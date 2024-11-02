@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan, faAdd } from "@fortawesome/free-solid-svg-icons";
+import toast from "react-hot-toast";
+import { Box, IconButton, InputBase, Typography } from "@mui/material";
+import { useTheme } from "@emotion/react";
+
 import { getCards } from "../all-apis/card/getCards";
 import { createCard } from "../all-apis/card/createCard";
 import { archiveCard } from "../all-apis/card/deleteCard";
 import CardItem from "./CardItem";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashCan, faAdd } from "@fortawesome/free-solid-svg-icons";
-import toast from "react-hot-toast";
 import Notification from "../components/common/Notification";
-
-import { Box, IconButton, InputBase, Typography } from "@mui/material";
-import { useTheme } from "@emotion/react";
 
 function List({ data, handleDeleteList, setLoading }) {
   const [cards, setCards] = useState([]);

@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import Card from "./Card";
 import {
   Box,
   Typography,
   IconButton
 } from '@mui/material';
 import { useTheme } from "@emotion/react";
+
+import Card from "./Card";
 
 function CardItem({ data, handleDeleteCard, setLoading }) {
   const [cardModal, setCardModal] = useState(false);

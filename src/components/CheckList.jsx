@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
-import CheckListItem from "./CheckListItem";
 import {
   Box,
   Button,
@@ -10,13 +9,15 @@ import {
   IconButton,
   InputBase,
 } from "@mui/material";
+import toast from "react-hot-toast";
+import { useTheme } from "@emotion/react";
+
+import CheckListItem from "./CheckListItem";
 import { createCheckListItem } from "../all-apis/check-list-item/createCheckListItem";
 import { deleteCheckListItem } from "../all-apis/check-list-item/deleteCheckListItem";
 import { updateCheckItem } from "../all-apis/check-list-item/updateCheckListItem";
-import toast from "react-hot-toast";
 import Notification from "./common/Notification";
 import { getCheckListItems } from "../all-apis/check-list-item/getCheckListItems";
-import { useTheme } from "@emotion/react";
 
 function CheckList({ cardId, data, handleDeleteCheckList, setLoading }) {
   const [checkListItems, setCheckListItems] = useState([]);

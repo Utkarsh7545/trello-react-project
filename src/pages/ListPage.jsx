@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import { Box, Button, IconButton, Typography } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useTheme } from "@mui/material/styles";
+
 import { getLists } from "../all-apis/list/getLists";
 import List from "../components/List";
 import ModalForm from "../components/common/ModalForm";
 import { createList } from "../all-apis/list/createList";
 import { archiveList } from "../all-apis/list/deleteList";
 import Loader from "../components/common/Loader";
-import toast from "react-hot-toast";
 import Notification from "../components/common/Notification";
-import { Box, Button, IconButton, Typography } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { useTheme } from "@mui/material/styles";
 
 function ListPage() {
   const theme = useTheme();

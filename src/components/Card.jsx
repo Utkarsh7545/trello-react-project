@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 import Notification from "../components/common/Notification";
 import { getCheckLists } from "../all-apis/check-list/getCheckLists";
 import CheckList from "./CheckList";
 import { createCheckList } from "../all-apis/check-list/createCheckList";
 import { deleteCheckList } from "../all-apis/check-list/deleteCheckList";
+
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import {
