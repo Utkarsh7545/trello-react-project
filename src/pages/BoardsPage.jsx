@@ -38,9 +38,6 @@ function BoardsPage() {
     e.target.name.value = "";
 
     try {
-      if (boards.length == 10) {
-        throw new Error("Board creation limit exceeded!");
-      }
       setLoading(true);
       const newBoard = await createBoard(boardName);
       setBoards((prevBoards) => [...prevBoards, newBoard]);

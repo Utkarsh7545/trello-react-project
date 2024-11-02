@@ -11,9 +11,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import {
   Button,
   Dialog,
-  DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   IconButton,
   InputBase,
